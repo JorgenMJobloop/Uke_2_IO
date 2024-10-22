@@ -48,4 +48,12 @@ public class IOHandler : IIOHandler
         }
         File.WriteAllText(path, content);
     }
+
+
+    public string CreateFile(string path)
+    {
+        var file = File.Create(path);
+        file.Close();
+        return path;
+    }
 }

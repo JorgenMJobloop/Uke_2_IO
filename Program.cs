@@ -21,8 +21,8 @@ class Program
             throw new IOException();
         }
 
-        iOHandler.ReadFile(filePath);
+        //iOHandler.ReadFile(filePath);
 
-        iOHandler.WriteToFile(filePath, textContent);
+        iOHandler.AppendToFile(iOHandler.CreateFile(filePath), textContent);
     }
 }
